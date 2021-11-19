@@ -1,0 +1,21 @@
+<%- include('../partials/header') %> 
+
+<main class="container">
+
+    <a href="/items/new" class="btn btn-dark">New Item</a>
+
+    <% for(item of items){ %> 
+        <div class="card" style="width: 18rem;">
+            <img src="<%= item.img %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= item.name %> </h5>
+                <p class="card-text">₹ <%= item.price %> </p>
+                <p class="card-text"><%= item.desc %> </p>
+                <a href="#" class="btn btn-primary">Show</a>
+            </div>
+        </div>
+    <% } %> 
+</main>
+
+<%- include('../partials/footer') %> 
+ 
